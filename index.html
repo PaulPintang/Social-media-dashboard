@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Social Media Dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; padding: 20px 0; }
+    .attribution a { color: var(-White); text-decoration: none; }
+    /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0px;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 19px;
+  left: 2px;
+  bottom: 2.6px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  /* background-color: #2196F3; */
+  background: linear-gradient(90deg, rgba(55,143,230,1) 0%, rgba(62,218,130,1) 100%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+
+}
+
+input:checked + .slider:before {
+  /* -webkit-transform: translateX(-21px);
+  -ms-transform: translateX(-21px);
+  transform: translateX(-21px); */
+  -webkit-transform: translateX(21px);
+  -ms-transform: translateX(21px);
+  transform: translateX(21px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+  </style>
+</head>
+<body>
+<section class="header">
+  <div class="container">
+    <div class="flex">
+      <div>
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+      </div>
+      <hr>
+      <div class="toggle-dark">
+        <p>Dark Mode</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="top">
+  <div class="container">
+    <div class="flex">
+      <div class="card fb">
+        <div class="flex">
+          <img src="./images/icon-facebook.svg" alt="">
+          <small>@nathanf</small>
+        </div>
+        <div class="p-3">
+          <h1>1987</h1>
+          <p>Followers</p>
+        </div>   
+        <div class="flex">
+          <img src="./images/icon-up.svg" alt="">
+          <small class="grn">12 Today</small>
+        </div>
+      </div>
+
+      <div class="card tweet">
+        <div class="flex">
+          <img src="./images/icon-twitter.svg" alt="">
+          <small>@nathanf</small>
+        </div>
+        <div class="p-3">
+          <h1>1044</h1>
+          <p>Followers</p>
+        </div>   
+        <div class="flex">
+          <img src="./images/icon-up.svg" alt="">
+          <small class="grn">99 Today</small>
+        </div>
+      </div>
+
+      <div class="card instagram">
+        <div class="flex">
+          <img src="./images/icon-instagram.svg" alt="">
+          <small>@realnathanf</small>
+        </div>
+        <div class="p-3">
+          <h1>11k</h1>
+          <p>Followers</p>
+        </div>   
+        <div class="flex">
+          <img src="./images/icon-up.svg" alt="">
+          <small class="grn">1099 Today</small>
+        </div>
+      </div>
+
+      <div class="card yt">
+        <div class="flex">
+          <img src="./images/icon-youtube.svg" alt="">
+          <small>Nathan F.</small>
+        </div>
+        <div class="p-3">
+          <h1>8239</h1>
+          <p>Subscribers</p>
+        </div>   
+        <div class="flex">
+          <img src="./images/icon-down.svg" alt="">
+          <small class="red">144 Today</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="overview">
+  <div class="container">
+    <h1>Overview - Today</h1>
+    <div class="flex">
+      <div class="card">
+        <div class="flex">
+          <p>Page Views</p>
+          <img src="./images/icon-facebook.svg" alt="">
+        </div>
+        <div class="flex">
+          <h2>87</h2>
+          <div>
+            <img src="./images/icon-up.svg" alt="">
+            <small class="grn">3%</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="flex">
+          <p>Likes</p>
+          <img src="./images/icon-facebook.svg" alt="">
+        </div>
+        <div class="flex">
+          <h2>52</h2>
+          <div>
+            <img src="./images/icon-down.svg" alt="">
+            <small class="red">2%</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="flex">
+          <p>Likes</p>
+          <img src="./images/icon-instagram.svg" alt="">
+        </div>
+        <div class="flex">
+          <h2>5462</h2>
+          <div>
+            <img src="./images/icon-up.svg" alt="">
+            <small class="grn">2257%</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="flex">
+          <p>Profile Views</p>
+          <img src="./images/icon-instagram.svg" alt="">
+        </div>
+        <div class="flex">
+          <h2>52k</h2>
+          <div>
+            <img src="./images/icon-up.svg" alt="">
+            <small class="grn">1375%</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="flex">
+          <p>Retweets</p>
+          <img src="./images/icon-twitter.svg" alt="">
+        </div>
+        <div class="flex">
+          <h2>117</h2>
+          <div>
+            <img src="./images/icon-up.svg" alt="">
+            <small class="grn">303%</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="flex">
+          <p>Likes</p>
+          <img src="./images/icon-twitter.svg" alt="">
+        </div>
+        <div class="flex">
+          <h2>507</h2>
+          <div>
+            <img src="./images/icon-up.svg" alt="">
+            <small class=grn>553%</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="flex">
+          <p>Likes</p>
+          <img src="./images/icon-youtube.svg" alt="">
+        </div>
+        <div class="flex">
+          <h2>107</h2>
+          <div>
+            <img src="./images/icon-down.svg" alt="">
+            <small class="red">19%</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="flex">
+          <p>Total Views</p>
+          <img src="./images/icon-youtube.svg" alt="">
+        </div>
+        <div class="flex">
+          <h2> 1407</h2>
+          <div>
+            <img src="./images/icon-down.svg" alt="">
+            <small class="red">12%</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">PaulJustin</a>.
+  </div>
+
+  <script>
+    const themeSwitch = document.querySelector('input')
+
+    themeSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode')
+    })
+  </script>
+</body>
+</html>

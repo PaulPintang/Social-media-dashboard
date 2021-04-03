@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  --White: hsl(0, 0%, 100%);
+  --hover: rgb(221, 221, 221);
+  --top: hsl(225, 100%, 98%);
+  --card: hsl(227, 47%, 96%);
+  --darkGrayBlue: hsl(228, 12%, 44%);
+  --veryDarkBlue: hsl(230, 17%, 14%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--veryDarkBlue);
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--White);
+}
+p {
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+small {
+  font-weight: 700;
+}
+hr {
+  display: none;
+}
+.dark-mode {
+  --White: hsl(230, 17%, 14%);
+  --hover: hsl(229, 20%, 32%);
+  --top: hsl(232, 19%, 15%);
+  --card: hsl(228, 28%, 20%);
+  --veryDarkBlue: hsl(0, 0%, 100%);
+}
+.red {
+  color: hsl(356, 69%, 56%);
+}
+.grn {
+  color: hsl(163, 72%, 41%);
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 30px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  width: 236px;
+  background-color: var(--card);
+  border-radius: 5px;
+}
+.fb {
+  border-top: 3px solid hsl(208, 92%, 53%);
+}
+.tweet {
+  border-top: 3px solid hsl(203, 89%, 53%);
+}
+.instagram {
+  border-top: 3px solid hsl(329, 70%, 58%);
+}
+.yt {
+  border-top: 3px solid hsl(348, 97%, 39%);
+}
+.p-3 {
+  padding: 20px 0;
+}
+.card:hover {
+  cursor: pointer;
+  background-color: var(--hover);
+}
+.header {
+  height: 200px;
+  background-color: var(--top);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.header .flex {
+  padding: 40px 0;
+}
+.header p {
+  font-size: 13px;
+}
+.toggle-dark {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.top {
+  position: relative;
+  top: -5rem;
+}
+.top .flex {
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.top .card {
+  height: 209px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top .card h1 {
+  font-size: 50px;
+}
+.top .card p {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+.top .card .flex {
+  justify-content: center;
+  gap: 7px;
+}
+
+.overview {
+  margin-top: -2rem;
+}
+.overview h1 {
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+  padding-bottom: 25px;
+}
+.overview h2 {
+  font-size: 27px;
+}
+
+.overview .flex {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.overview .card {
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+@media (min-width: 300px) and (max-width: 556px) {
+  .header .flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  hr {
+    display: unset;
+    width: 100%;
+  }
+  .toggle-dark {
+    width: 100%;
+    justify-self: center;
+    justify-content: space-between;
+  }
+  .top {
+    top: -3rem;
+  }
+  .top .flex {
+    /* gap: 25px; */
+  }
+  .card {
+    width: 100%;
+  }
+}
